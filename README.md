@@ -2,7 +2,7 @@
 
 
 ## docker环境安装
-eos官方提供了eos开发环境docker镜像，直接安装即可。下面命令启动了一个只有一个bp节点的eso私有网络。中容器内的/work目录是我们的工作目录，为了方便编码我们将它挂载在主机的/Users/stirling/code/eos/work目录。
+eos官方提供了eos开发环境docker镜像，直接安装即可。下面命令启动了一个只有一个bp节点的eso私有网络。容器内的/work目录是我们的工作目录，为了方便编码我们将它挂载在主机的/Users/stirling/code/eos/work目录。
 ```
 docker run --name eosio -d \
   -p 8888:8888 \
@@ -26,10 +26,10 @@ docker run --name eosio -d \
 ```
 查看一下容器日志可以，看到每秒钟产生两个区块。
 ```
- docker logs -f esoio
+ docker logs -f eosio
 ```
 
-进入容器里面
+进到容器里面
 ```
  docker exec  -it eosio /bin/bash
 ```
@@ -186,7 +186,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 https://tools.cryptokylin.io/#/tools/create
 我们这注册了账号为aaaaaaaannnn并领取了一定数量的eos
 
-我们定义一个新的命令，将cleos指向新的Testnet地址
+我们定义一个新的命令，将cleos指像Testnet某个bp节点的地址
 ```
 root@6af410e7fc7e:/work/hello# alias cltest='cleos -u http://kylin.fn.eosbixin.com'
 ```
@@ -226,7 +226,7 @@ private key: 5JRxGG2SxH5QmUJBXpuhLYs41o4XKVrhJxzq7wBUErozZnkTLGj
 imported private key for: EOS823rdQMisWJoWMMJEjqi2Wm548BWSojVL63M7HRV2ec2WKinpJ
 ```
 
-给账号点ram
+给账号买点ram
 ```
 root@6af410e7fc7e:/work/hello# cltest system buyram aaaaaaaannnn aaaaaaaannnn "10 EOS"
 2018-08-31T03:44:10.187 thread-0   main.cpp:438                  create_action        ] result: {"binargs":"30e79cc618638c3130e79cc618638c31a08601000000000004454f5300000000"} arg: {"code":"eosio","action":"buyram","args":{"payer":"aaaaaaaannnn","receiver":"aaaaaaaannnn","quant":"10.0000 EOS"}} 
