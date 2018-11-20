@@ -29,6 +29,11 @@ docker run --name eosio -d \
  docker logs -f eosio
 ```
 
+为了显示更多调试信息，需要修改一下配置文件 /tmp/eosio/config/config.ini
+```
+verbose-http-errors = true
+```
+
 进到容器里面
 ```
  docker exec  -it eosio /bin/bash
