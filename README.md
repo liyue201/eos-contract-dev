@@ -1,3 +1,6 @@
+# 这种方式很快被官方废弃了，直接看官方文档吧 https://developers.eos.io/eosio-cpp/docs/introduction-to-smart-contracts
+
+
 # eos智能合约开发环境搭建和部署
 
 
