@@ -1,10 +1,10 @@
-## 这种方式很快被官方废弃了，直接看官方文档吧
+## 这种方式已经被官方废弃了，这是新的方式
 
-https://developers.eos.io/eosio-cpp/docs/introduction-to-smart-contracts
+https://github.com/EOSIO/eosio.cdt
 
-## 或者用这个编译成镜像
+## 这有个dockerfile
 
-https://github.com/blockchain-lib/docker-eosio.cdt
+https://github.com/RuBAN-GT/docker-eosio.cdt
 
 
 # eos智能合约开发环境搭建和部署
